@@ -7,10 +7,9 @@ l'IA (AEO/GEO — ChatGPT, Claude, Perplexity, Gemini...).
 
 ## ⚠️ À personnaliser avant mise en ligne
 
-Les informations d'identité et de contact ci-dessous sont **réelles**
-(nom, adresse, téléphone, horaires — d'après votre fiche Google
-Établissement). Il reste toutefois quelques valeurs **inventées ou à
-confirmer** avant mise en ligne :
+Toutes les informations ci-dessous sont désormais **réelles** (nom, adresse,
+téléphone, horaires, domaine, email, photos de la façade). Il reste
+seulement quelques valeurs administratives à compléter :
 
 | Donnée | Valeur actuelle | Statut | Où la remplacer |
 |---|---|---|---|
@@ -19,17 +18,33 @@ confirmer** avant mise en ligne :
 | Téléphone | 03 85 45 41 85 | ✅ réel | — |
 | Horaires | Lun–Ven 9h–12h / 14h–18h, fermé le week-end | ✅ réel | — |
 | Note Google | 5,0 ★ (10 avis) | ✅ réel | Mise à jour manuelle si le nombre d'avis évolue (`index.html`, badge hero + `aggregateRating` JSON-LD) |
-| Email | contact@henrilorne-notaire.fr | ⚠️ inventé (aucun site existant au moment de la création) | Toutes les pages — remplacez par votre vraie adresse (ex. celle en `@notaires.fr` ou une adresse dédiée au nom de domaine choisi) |
-| Nom de domaine | `www.henrilorne-notaire.fr` | ⚠️ inventé, à réserver ou remplacer | Toutes les balises `canonical`, `og:url`, JSON-LD, `sitemap.xml`, `robots.txt`, `llms.txt` |
+| Email | henri.lorne@notaires.fr | ✅ réel | — |
+| Nom de domaine | `lorne.notaires.fr` | ✅ réel | — |
+| Photos | Vraie photo de la façade (enseigne « NOTAIRE » rétroéclairée) | ✅ intégrée | Page d'accueil (hero) et page « Le notaire » (`assets/img/etude-facade.jpg` et `etude-facade-portrait.jpg`) |
 | Coordonnées GPS (carte) | 46.7936, 4.8306 (centre approximatif de Châtenoy-le-Royal) | ⚠️ approximatif | Affinez avec les coordonnées exactes du 15A avenue du Général Charles de Gaulle dans `contact/index.html` (iframe) et le JSON-LD de `index.html` |
 | CRPCEN / SIRET / TVA / forme d'exercice | `[à compléter]` | ⚠️ à compléter | `mentions-legales/index.html` |
-| Hébergeur | `[à compléter]` | ⚠️ à compléter | `mentions-legales/index.html` |
+| Hébergeur | `[à compléter]` | ⚠️ à compléter | `mentions-legales/index.html` — voir aussi la note « Hébergement » ci-dessous, spécifique aux domaines `notaires.fr` |
 | Formulaire de contact | `action="https://formspree.io/f/VOTRE_ID_FORMSPREE"` | ⚠️ à activer | `contact/index.html` — créez un compte sur [Formspree](https://formspree.io) (ou équivalent) et remplacez l'identifiant |
-| Photos | Illustrations SVG génériques | ⚠️ à remplacer | Vous avez déjà de belles photos de la façade (enseigne « NOTAIRE » rétroéclairée) : intégrez-les dans `le-notaire/index.html` et le hero de `index.html` à la place des illustrations vectorielles |
 
-Astuce : recherchez `henrilorne-notaire.fr` et `contact@henrilorne-notaire.fr`
-dans tous les fichiers pour retrouver rapidement le nom de domaine et
-l'email à confirmer.
+### ⚠️ Important — hébergement sur un domaine `notaires.fr`
+
+Votre domaine `lorne.notaires.fr` est un sous-domaine du portail national
+`notaires.fr`, opéré par l'ADSN (Association pour le Développement du
+Service Notarial) pour le compte des notaires de France. Ces sites sont en
+général générés via une plateforme/CMS mutualisé (choix de modèles,
+personnalisation limitée) plutôt qu'hébergés en dépôt de fichiers statiques
+libres comme celui-ci. **Avant de déployer ce site tel quel**, vérifiez
+auprès de votre interlocuteur ADSN / chambre des notaires :
+
+- s'il est possible d'héberger un site statique personnalisé (upload de
+  fichiers HTML/CSS/JS) sous `lorne.notaires.fr`, ou si le site doit
+  obligatoirement passer par leur CMS ;
+- si un upload est possible, la procédure technique (FTP, interface
+  d'administration, etc.) ;
+- si ce n'est pas possible nativement, ce site peut servir de **maquette de
+  référence** (design, contenus, structure SEO) à recréer dans l'éditeur du
+  portail notaires.fr, ou être déployé sur un nom de domaine indépendant
+  avec une redirection depuis `lorne.notaires.fr` si l'ADSN l'autorise.
 
 ## Structure du site
 

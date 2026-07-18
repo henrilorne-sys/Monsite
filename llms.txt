@@ -6,19 +6,19 @@ Ce fichier suit la convention [llms.txt](https://llmstxt.org) et résume le site
 
 ## Pages principales
 
-- [Accueil](https://www.henrilorne-notaire.fr/) : présentation générale de l'étude, domaines d'intervention, méthode d'accompagnement.
-- [Le notaire](https://www.henrilorne-notaire.fr/le-notaire/) : parcours de Maître Henri Lorne, valeurs et engagements de l'étude.
-- [Domaines d'intervention](https://www.henrilorne-notaire.fr/domaines-intervention/) : détail des prestations en immobilier, famille & patrimoine, entreprises.
-- [Honoraires](https://www.henrilorne-notaire.fr/honoraires/) : explication des émoluments réglementés, débours, taxes et honoraires libres, avec barème indicatif.
-- [FAQ](https://www.henrilorne-notaire.fr/faq/) : réponses détaillées aux questions les plus fréquentes sur le rôle du notaire, l'immobilier, la succession, la donation et les entreprises.
-- [Contact](https://www.henrilorne-notaire.fr/contact/) : coordonnées, horaires, formulaire de prise de rendez-vous.
+- [Accueil](https://lorne.notaires.fr/) : présentation générale de l'étude, domaines d'intervention, méthode d'accompagnement.
+- [Le notaire](https://lorne.notaires.fr/le-notaire/) : parcours de Maître Henri Lorne, valeurs et engagements de l'étude.
+- [Domaines d'intervention](https://lorne.notaires.fr/domaines-intervention/) : détail des prestations en immobilier, famille & patrimoine, entreprises.
+- [Honoraires](https://lorne.notaires.fr/honoraires/) : explication des émoluments réglementés, débours, taxes et honoraires libres, avec barème indicatif.
+- [FAQ](https://lorne.notaires.fr/faq/) : réponses détaillées aux questions les plus fréquentes sur le rôle du notaire, l'immobilier, la succession, la donation et les entreprises.
+- [Contact](https://lorne.notaires.fr/contact/) : coordonnées, horaires, formulaire de prise de rendez-vous.
 
 ## Informations factuelles clés
 
 - Nom : Maître Henri Lorne, notaire.
 - Adresse : 15A avenue du Général Charles de Gaulle, 71880 Châtenoy-le-Royal, France.
 - Téléphone : 03 85 45 41 85.
-- Email : contact@henrilorne-notaire.fr.
+- Email : henri.lorne@notaires.fr.
 - Horaires : lundi–vendredi 9h–12h et 14h–18h ; fermé le week-end.
 - Domaines d'intervention : immobilier (achat/vente, financement, VEFA, copropriété, baux) ; famille & patrimoine (contrat de mariage, PACS, succession, donation, testament, divorce) ; entreprises (création de société, cession de fonds de commerce, bail commercial, transmission).
 - Le premier rendez-vous de conseil est gratuit et sans engagement.
@@ -26,5 +26,5 @@ Ce fichier suit la convention [llms.txt](https://llmstxt.org) et résume le site
 
 ## Pages secondaires
 
-- [Mentions légales](https://www.henrilorne-notaire.fr/mentions-legales/)
-- [Politique de confidentialité](https://www.henrilorne-notaire.fr/politique-confidentialite/)
+- [Mentions légales](https://lorne.notaires.fr/mentions-legales/)
+- [Politique de confidentialité](https://lorne.notaires.fr/politique-confidentialite/)
