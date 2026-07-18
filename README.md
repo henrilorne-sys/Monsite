@@ -24,7 +24,21 @@ seulement quelques valeurs administratives à compléter :
 | Coordonnées GPS (carte) | 46.7936, 4.8306 (centre approximatif de Châtenoy-le-Royal) | ⚠️ approximatif | Affinez avec les coordonnées exactes du 15A avenue du Général Charles de Gaulle dans `contact/index.html` (iframe) et le JSON-LD de `index.html` |
 | CRPCEN / SIRET / TVA / forme d'exercice | `[à compléter]` | ⚠️ à compléter | `mentions-legales/index.html` |
 | Hébergeur | `[à compléter]` | ⚠️ à compléter | `mentions-legales/index.html` — voir aussi la note « Hébergement » ci-dessous, spécifique aux domaines `notaires.fr` |
-| Formulaire de contact | `action="https://formspree.io/f/VOTRE_ID_FORMSPREE"` | ⚠️ à activer | `contact/index.html` — créez un compte sur [Formspree](https://formspree.io) (ou équivalent) et remplacez l'identifiant |
+| Formulaire de contact | `action="https://formspree.io/f/henri.lorne@notaires.fr"` | ✅ configuré | — voir note ci-dessous sur la confirmation Formspree |
+
+### 📩 Activation du formulaire de contact (Formspree)
+
+Le formulaire pointe vers `https://formspree.io/f/henri.lorne@notaires.fr` :
+Formspree l'associe automatiquement à votre adresse **dès la toute première
+soumission réelle** du formulaire (test en le remplissant vous-même une
+fois le site en ligne). À ce moment-là, Formspree vous envoie un email de
+confirmation à `henri.lorne@notaires.fr` — il faut cliquer sur le lien de
+confirmation pour activer la réception des messages suivants. Sans cette
+étape, les soumissions ultérieures ne seront pas délivrées. Si vous
+préférez un contrôle plus fin (tableau de bord, plusieurs formulaires,
+notifications personnalisées), créez plutôt un compte sur
+[formspree.io](https://formspree.io) et remplacez l'URL par l'identifiant
+de formulaire fourni par le tableau de bord.
 
 ### ⚠️ Important — hébergement sur un domaine `notaires.fr`
 
