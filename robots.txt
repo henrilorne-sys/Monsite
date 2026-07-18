@@ -1,0 +1,9 @@
+# robots.txt — Étude notariale Henri Lorne
+# Le site est entièrement public : aucune restriction n'est nécessaire,
+# y compris pour les robots d'indexation IA (utile pour les moteurs
+# de réponse génératifs : ChatGPT, Claude, Perplexity, Gemini...).
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.etude-lorne-notaires.fr/sitemap.xml
