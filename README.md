@@ -7,28 +7,29 @@ l'IA (AEO/GEO — ChatGPT, Claude, Perplexity, Gemini...).
 
 ## ⚠️ À personnaliser avant mise en ligne
 
-Le contenu ci-dessous a été rempli avec des informations **plausibles mais
-provisoires** (déduites du nom de domaine `notaires.fr` de l'expéditeur) afin
-de livrer un site complet et cohérent. **Remplacez impérativement** ces
-valeurs avant publication :
+Les informations d'identité et de contact ci-dessous sont **réelles**
+(nom, adresse, téléphone, horaires — d'après votre fiche Google
+Établissement). Il reste toutefois quelques valeurs **inventées ou à
+confirmer** avant mise en ligne :
 
-| Donnée | Valeur actuelle (placeholder) | Où la remplacer |
-|---|---|---|
-| Nom du notaire | Maître Henri Lorne | Toutes les pages (header, footer, JSON-LD) |
-| Ville / adresse | 12 rue de la République, 69002 Lyon | Toutes les pages (footer, JSON-LD, `contact/index.html`) |
-| Téléphone | 04 78 00 00 00 | Toutes les pages (`tel:+33478000000`) |
-| Email | contact@etude-lorne-notaires.fr | Toutes les pages |
-| Nom de domaine | `www.etude-lorne-notaires.fr` | Toutes les balises `canonical`, `og:url`, JSON-LD, `sitemap.xml`, `robots.txt`, `llms.txt` |
-| CRPCEN / SIRET / TVA / forme d'exercice | `[à compléter]` | `mentions-legales/index.html` |
-| Hébergeur | `[à compléter]` | `mentions-legales/index.html` |
-| Coordonnées GPS (carte) | 45.757, 4.832 (Lyon, approximatif) | `contact/index.html` (iframe OpenStreetMap) et JSON-LD de `index.html` |
-| Formulaire de contact | `action="https://formspree.io/f/VOTRE_ID_FORMSPREE"` | `contact/index.html` — créez un compte sur [Formspree](https://formspree.io) (ou équivalent) et remplacez l'identifiant |
-| Photos | Illustrations SVG génériques | Remplacez par de vraies photos (notaire, étude) dans `le-notaire/index.html` et le hero de `index.html` |
+| Donnée | Valeur actuelle | Statut | Où la remplacer |
+|---|---|---|---|
+| Nom | Henri Lorne — Notaire | ✅ réel | — |
+| Adresse | 15A avenue du Général Charles de Gaulle, 71880 Châtenoy-le-Royal | ✅ réel | — |
+| Téléphone | 03 85 45 41 85 | ✅ réel | — |
+| Horaires | Lun–Ven 9h–12h / 14h–18h, fermé le week-end | ✅ réel | — |
+| Note Google | 5,0 ★ (10 avis) | ✅ réel | Mise à jour manuelle si le nombre d'avis évolue (`index.html`, badge hero + `aggregateRating` JSON-LD) |
+| Email | contact@henrilorne-notaire.fr | ⚠️ inventé (aucun site existant au moment de la création) | Toutes les pages — remplacez par votre vraie adresse (ex. celle en `@notaires.fr` ou une adresse dédiée au nom de domaine choisi) |
+| Nom de domaine | `www.henrilorne-notaire.fr` | ⚠️ inventé, à réserver ou remplacer | Toutes les balises `canonical`, `og:url`, JSON-LD, `sitemap.xml`, `robots.txt`, `llms.txt` |
+| Coordonnées GPS (carte) | 46.7936, 4.8306 (centre approximatif de Châtenoy-le-Royal) | ⚠️ approximatif | Affinez avec les coordonnées exactes du 15A avenue du Général Charles de Gaulle dans `contact/index.html` (iframe) et le JSON-LD de `index.html` |
+| CRPCEN / SIRET / TVA / forme d'exercice | `[à compléter]` | ⚠️ à compléter | `mentions-legales/index.html` |
+| Hébergeur | `[à compléter]` | ⚠️ à compléter | `mentions-legales/index.html` |
+| Formulaire de contact | `action="https://formspree.io/f/VOTRE_ID_FORMSPREE"` | ⚠️ à activer | `contact/index.html` — créez un compte sur [Formspree](https://formspree.io) (ou équivalent) et remplacez l'identifiant |
+| Photos | Illustrations SVG génériques | ⚠️ à remplacer | Vous avez déjà de belles photos de la façade (enseigne « NOTAIRE » rétroéclairée) : intégrez-les dans `le-notaire/index.html` et le hero de `index.html` à la place des illustrations vectorielles |
 
-Astuce : la plupart de ces valeurs se retrouvent facilement avec une
-recherche globale ("Find in files") sur `Henri Lorne`, `69002 Lyon`,
-`04 78 00 00 00`, `contact@etude-lorne-notaires.fr` et
-`etude-lorne-notaires.fr`.
+Astuce : recherchez `henrilorne-notaire.fr` et `contact@henrilorne-notaire.fr`
+dans tous les fichiers pour retrouver rapidement le nom de domaine et
+l'email à confirmer.
 
 ## Structure du site
 

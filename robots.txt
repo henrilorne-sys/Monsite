@@ -6,4 +6,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.etude-lorne-notaires.fr/sitemap.xml
+Sitemap: https://www.henrilorne-notaire.fr/sitemap.xml
