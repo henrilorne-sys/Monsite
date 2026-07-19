@@ -72,7 +72,7 @@
       var parent = el.parentElement;
       var index = groupCounters.has(parent) ? groupCounters.get(parent) : 0;
       groupCounters.set(parent, index + 1);
-      var delay = Math.min(index, 5) * 110;
+      var delay = Math.min(index, 5) * 150;
       var side = index % 2 === 0 ? -1 : 1;
       el.style.setProperty("--reveal-delay", delay + "ms");
       el.style.setProperty("--reveal-x", side * 34 + "px");
