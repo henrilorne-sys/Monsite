@@ -95,13 +95,25 @@
 
       // Filet de sécurité : un défilement très rapide (molette, geste
       // "flick" sur mobile) peut faire sauter des frames et empêcher
-      // l'observateur de détecter le passage d'un élément. Après un
-      // délai raisonnable, on force l'affichage du contenu restant afin
-      // qu'il ne reste jamais invisible.
-      setTimeout(function () {
-        revealEls.forEach(function (el) { el.classList.add("is-visible"); });
-        io.disconnect();
-      }, 2500);
+      // l'observateur de détecter le passage d'un élément. On ne force
+      // l'affichage QUE des éléments déjà proches du haut de l'écran
+      // (donc censés avoir été vus), jamais de tout le reste de la page
+      // — sinon le contenu situé plus bas serait révélé d'avance, avant
+      // même que l'utilisateur ait commencé à défiler jusque-là.
+      var safetyNet = setInterval(function () {
+        var remaining = document.querySelectorAll("[data-reveal]:not(.is-visible)");
+        if (!remaining.length) {
+          clearInterval(safetyNet);
+          return;
+        }
+        remaining.forEach(function (el) {
+          var rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 1.15) {
+            el.classList.add("is-visible");
+            io.unobserve(el);
+          }
+        });
+      }, 700);
     } else {
       revealEls.forEach(function (el) { el.classList.add("is-visible"); });
     }
