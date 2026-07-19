@@ -102,7 +102,21 @@ body {
 img, picture, svg { display: block; max-width: 100%; height: auto; }
 input, button, textarea, select { font: inherit; color: inherit; }
 button { cursor: pointer; }
-a { color: inherit; text-decoration-color: var(--color-accent); }
+a {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-color: var(--color-accent);
+}
+/* Liens en prose (au fil du texte) : on garde un soulignement pour rester
+   repérables sans dépendre uniquement de la couleur (accessibilité). Les
+   liens "composants" (boutons, cartes, logo, navigation...) restent sans
+   soulignement, leur zone cliquable étant déjà visuellement évidente. */
+.flow a,
+.field--checkbox label a,
+.callout a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 h1, h2, h3, h4 { font-family: var(--font-serif); line-height: 1.15; font-weight: 600; text-wrap: balance; }
 p { text-wrap: pretty; }
 ul, ol { padding-left: 1.15em; }
@@ -614,6 +628,8 @@ h4 { font-size: var(--fs-600); }
   border-radius: var(--radius-sm);
 }
 .info-list .icon svg { width: 20px; height: 20px; }
+.info-list a { text-decoration: none; font-weight: 600; }
+.info-list a:hover { text-decoration: underline; }
 
 /* --- Table honoraires --- */
 .table-wrap { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-md); }
