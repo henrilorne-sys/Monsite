@@ -399,6 +399,8 @@ h4 { font-size: var(--fs-600); }
   color: var(--color-text-muted);
 }
 .hero__trust strong { display: block; color: var(--color-text); font-family: var(--font-serif); font-size: 1.3rem; }
+.hero__trust a { color: var(--color-text-muted); text-decoration: none; }
+.hero__trust a:hover { color: var(--color-primary); text-decoration: underline; }
 
 .hero__art {
   position: relative;
