@@ -250,10 +250,9 @@ h4 { font-size: var(--fs-600); }
   position: fixed;
   top: 0;
   left: 0;
-  height: 4px;
+  height: 2px;
   width: 0%;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  box-shadow: 0 0 10px color-mix(in srgb, var(--color-accent) 70%, transparent);
   z-index: 1000;
   transition: width 0.12s linear;
 }
