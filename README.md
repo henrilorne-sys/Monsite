@@ -1,4 +1,4 @@
-# Site — Étude notariale (Maître Henri Lorne)
+# Site — Étude notariale (Henri Lorne - Notaire)
 
 Site statique (HTML/CSS/JS vanilla, sans framework ni étape de build) pour une
 étude notariale moderne : rapide, mobile-first, accessible, et optimisé pour
@@ -13,26 +13,26 @@ seulement quelques valeurs administratives à compléter :
 
 | Donnée | Valeur actuelle | Statut | Où la remplacer |
 |---|---|---|---|
-| Nom | Henri Lorne — Notaire | ✅ réel | — |
+| Nom | Henri Lorne - Notaire | ✅ réel | — |
 | Adresse | 15A avenue du Général Charles de Gaulle, 71880 Châtenoy-le-Royal | ✅ réel | — |
 | Téléphone | 03 85 45 41 85 | ✅ réel | — |
 | Horaires | Lun–Ven 9h–12h / 14h–18h, fermé le week-end | ✅ réel | — |
 | Note Google | 5,0 ★ (10 avis) | ✅ réel | Mise à jour manuelle si le nombre d'avis évolue (`index.html`, badge hero + `aggregateRating` JSON-LD) |
-| Email | henri.lorne@notaires.fr | ✅ réel | — |
+| Email | Etude.lorne@notaires.fr (adresse générale de l'étude) | ✅ réel | — |
 | Nom de domaine | `lorne.notaires.fr` | ✅ réel | — |
 | Photos | Vraie photo de la façade (enseigne « NOTAIRE » rétroéclairée) | ✅ intégrée | Page d'accueil (hero) et page « Le notaire » (`assets/img/etude-facade.jpg` et `etude-facade-portrait.jpg`) |
 | Coordonnées GPS (carte) | 46.7936, 4.8306 (centre approximatif de Châtenoy-le-Royal) | ⚠️ approximatif | Affinez avec les coordonnées exactes du 15A avenue du Général Charles de Gaulle dans `contact/index.html` (iframe) et le JSON-LD de `index.html` |
 | CRPCEN / SIRET / TVA / forme d'exercice | `[à compléter]` | ⚠️ à compléter | `mentions-legales/index.html` |
 | Hébergeur | `[à compléter]` | ⚠️ à compléter | `mentions-legales/index.html` — voir aussi la note « Hébergement » ci-dessous, spécifique aux domaines `notaires.fr` |
-| Formulaire de contact | `action="https://formspree.io/f/henri.lorne@notaires.fr"` | ✅ configuré | — voir note ci-dessous sur la confirmation Formspree |
+| Formulaire de contact | `action="https://formspree.io/f/Etude.lorne@notaires.fr"` | ✅ configuré | — voir note ci-dessous sur la confirmation Formspree |
 
 ### 📩 Activation du formulaire de contact (Formspree)
 
-Le formulaire pointe vers `https://formspree.io/f/henri.lorne@notaires.fr` :
-Formspree l'associe automatiquement à votre adresse **dès la toute première
+Le formulaire pointe vers `https://formspree.io/f/Etude.lorne@notaires.fr` :
+Formspree l'associe automatiquement à cette adresse **dès la toute première
 soumission réelle** du formulaire (test en le remplissant vous-même une
-fois le site en ligne). À ce moment-là, Formspree vous envoie un email de
-confirmation à `henri.lorne@notaires.fr` — il faut cliquer sur le lien de
+fois le site en ligne). À ce moment-là, Formspree envoie un email de
+confirmation à `Etude.lorne@notaires.fr` — il faut cliquer sur le lien de
 confirmation pour activer la réception des messages suivants. Sans cette
 étape, les soumissions ultérieures ne seront pas délivrées. Si vous
 préférez un contrôle plus fin (tableau de bord, plusieurs formulaires,
@@ -124,11 +124,3 @@ automatiquement.
 python3 -m http.server 8080
 # puis ouvrir http://localhost:8080
 ```
-
-## Formulaire de contact
-
-Le formulaire (`contact/index.html`) est prêt à fonctionner avec
-[Formspree](https://formspree.io) (gratuit jusqu'à 50 messages/mois) : créez
-un formulaire, copiez son identifiant et remplacez `VOTRE_ID_FORMSPREE` dans
-l'attribut `action`. Tant que ce n'est pas fait, le site affiche un message
-d'erreur explicite au lieu d'échouer silencieusement.

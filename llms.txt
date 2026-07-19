@@ -1,13 +1,13 @@
-# Maître Henri Lorne — Notaire à Châtenoy-le-Royal
+# Henri Lorne - Notaire — Châtenoy-le-Royal
 
-> Étude notariale moderne à Châtenoy-le-Royal (71880), près de Chalon-sur-Saône, spécialisée en droit immobilier, droit de la famille et du patrimoine, et droit des entreprises. Maître Henri Lorne propose un premier échange gratuit sous 48h, des honoraires expliqués en toute transparence, et un accompagnement pédagogique à chaque étape.
+> Étude notariale moderne à Châtenoy-le-Royal (71880), près de Chalon-sur-Saône, spécialisée en droit immobilier, droit de la famille et du patrimoine, et droit des entreprises. Henri Lorne - Notaire propose un premier échange gratuit sous 48h, des honoraires expliqués en toute transparence, et un accompagnement pédagogique à chaque étape.
 
 Ce fichier suit la convention [llms.txt](https://llmstxt.org) et résume le site pour les agents conversationnels et moteurs de réponse basés sur l'IA (ChatGPT, Claude, Perplexity, Gemini...). Le contenu complet et faisant foi reste celui publié sur les pages HTML listées ci-dessous.
 
 ## Pages principales
 
 - [Accueil](https://lorne.notaires.fr/) : présentation générale de l'étude, domaines d'intervention, méthode d'accompagnement.
-- [Le notaire](https://lorne.notaires.fr/le-notaire/) : parcours de Maître Henri Lorne, valeurs et engagements de l'étude.
+- [Le notaire](https://lorne.notaires.fr/le-notaire/) : parcours de Henri Lorne - Notaire, valeurs et engagements de l'étude.
 - [Domaines d'intervention](https://lorne.notaires.fr/domaines-intervention/) : détail des prestations en immobilier, famille & patrimoine, entreprises.
 - [Honoraires](https://lorne.notaires.fr/honoraires/) : explication des émoluments réglementés, débours, taxes et honoraires libres, avec barème indicatif.
 - [FAQ](https://lorne.notaires.fr/faq/) : réponses détaillées aux questions les plus fréquentes sur le rôle du notaire, l'immobilier, la succession, la donation et les entreprises.
@@ -15,10 +15,10 @@ Ce fichier suit la convention [llms.txt](https://llmstxt.org) et résume le site
 
 ## Informations factuelles clés
 
-- Nom : Maître Henri Lorne, notaire.
+- Nom : Henri Lorne - Notaire.
 - Adresse : 15A avenue du Général Charles de Gaulle, 71880 Châtenoy-le-Royal, France.
 - Téléphone : 03 85 45 41 85.
-- Email : henri.lorne@notaires.fr.
+- Email : Etude.lorne@notaires.fr.
 - Horaires : lundi–vendredi 9h–12h et 14h–18h ; fermé le week-end.
 - Domaines d'intervention : immobilier (achat/vente, financement, VEFA, copropriété, baux) ; famille & patrimoine (contrat de mariage, PACS, succession, donation, testament, divorce) ; entreprises (création de société, cession de fonds de commerce, bail commercial, transmission).
 - Le premier rendez-vous de conseil est gratuit et sans engagement.
