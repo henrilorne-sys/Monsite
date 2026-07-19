@@ -18,7 +18,7 @@ Ce fichier suit la convention [llms.txt](https://llmstxt.org) et résume le site
 - Nom : Henri Lorne - Notaire.
 - Adresse : 15A avenue du Général Charles de Gaulle, 71880 Châtenoy-le-Royal, France.
 - Téléphone : 03 85 45 41 85.
-- Email : Etude.lorne@notaires.fr.
+- Email : etude.lorne@notaires.fr.
 - Horaires : lundi–vendredi 9h–12h et 14h–18h ; fermé le week-end.
 - Domaines d'intervention : immobilier (achat/vente, financement, VEFA, copropriété, baux) ; famille & patrimoine (contrat de mariage, PACS, succession, donation, testament, divorce) ; entreprises (création de société, cession de fonds de commerce, bail commercial, transmission).
 - Le premier rendez-vous de conseil est gratuit et sans engagement.

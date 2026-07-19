@@ -61,9 +61,21 @@
     });
   });
 
-  /* ---------- Révélation au défilement ---------- */
+  /* ---------- Révélation au défilement (avec effet de cascade) ---------- */
   var revealEls = document.querySelectorAll("[data-reveal]");
   if (revealEls.length) {
+    // Décalage en cascade : les éléments qui partagent un même parent
+    // (cartes d'une grille, étapes, éléments de chronologie...) se
+    // révèlent l'un après l'autre plutôt que tous d'un coup.
+    var groupCounters = new WeakMap();
+    revealEls.forEach(function (el) {
+      var parent = el.parentElement;
+      var index = groupCounters.has(parent) ? groupCounters.get(parent) : 0;
+      groupCounters.set(parent, index + 1);
+      var delay = Math.min(index, 5) * 80;
+      el.style.setProperty("--reveal-delay", delay + "ms");
+    });
+
     if ("IntersectionObserver" in window) {
       var io = new IntersectionObserver(
         function (entries) {
@@ -91,6 +103,57 @@
       revealEls.forEach(function (el) { el.classList.add("is-visible"); });
     }
   }
+
+  /* ---------- Barre de progression, en-tête dynamique, parallaxe ---------- */
+  var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var siteHeader = document.querySelector(".site-header");
+  var heroArt = document.querySelector(".hero__art");
+
+  var progressBar = document.createElement("div");
+  progressBar.className = "scroll-progress";
+  progressBar.setAttribute("aria-hidden", "true");
+  document.body.prepend(progressBar);
+
+  if (heroArt && !prefersReducedMotion) {
+    heroArt.setAttribute("data-parallax", "");
+  }
+
+  var ticking = false;
+
+  function updateOnScroll() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    // Barre de progression de lecture
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = progress + "%";
+
+    // En-tête : ombre + resserrement après un léger défilement
+    if (siteHeader) {
+      siteHeader.classList.toggle("is-scrolled", scrollTop > 12);
+    }
+
+    // Parallaxe très légère sur l'image du hero
+    if (heroArt && !prefersReducedMotion) {
+      var offset = Math.min(scrollTop * 0.12, 40);
+      heroArt.style.setProperty("--parallax-y", offset + "px");
+    }
+
+    ticking = false;
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!ticking) {
+        window.requestAnimationFrame(updateOnScroll);
+        ticking = true;
+      }
+    },
+    { passive: true }
+  );
+
+  updateOnScroll();
 
   /* ---------- Année courante dans le footer ---------- */
   document.querySelectorAll("[data-current-year]").forEach(function (el) {
