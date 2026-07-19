@@ -72,8 +72,11 @@
       var parent = el.parentElement;
       var index = groupCounters.has(parent) ? groupCounters.get(parent) : 0;
       groupCounters.set(parent, index + 1);
-      var delay = Math.min(index, 5) * 80;
+      var delay = Math.min(index, 5) * 110;
+      var side = index % 2 === 0 ? -1 : 1;
       el.style.setProperty("--reveal-delay", delay + "ms");
+      el.style.setProperty("--reveal-x", side * 34 + "px");
+      el.style.setProperty("--reveal-r", side * 1.4 + "deg");
     });
 
     if ("IntersectionObserver" in window) {
@@ -133,9 +136,9 @@
       siteHeader.classList.toggle("is-scrolled", scrollTop > 12);
     }
 
-    // Parallaxe très légère sur l'image du hero
+    // Parallaxe sur l'image du hero
     if (heroArt && !prefersReducedMotion) {
-      var offset = Math.min(scrollTop * 0.12, 40);
+      var offset = Math.min(scrollTop * 0.2, 55);
       heroArt.style.setProperty("--parallax-y", offset + "px");
     }
 

@@ -250,9 +250,10 @@ h4 { font-size: var(--fs-600); }
   position: fixed;
   top: 0;
   left: 0;
-  height: 3px;
+  height: 4px;
   width: 0%;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  box-shadow: 0 0 10px color-mix(in srgb, var(--color-accent) 70%, transparent);
   z-index: 1000;
   transition: width 0.12s linear;
 }
@@ -273,7 +274,7 @@ h4 { font-size: var(--fs-600); }
   transition: box-shadow var(--transition-base), border-color var(--transition-base);
 }
 .site-header.is-scrolled {
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   border-bottom-color: transparent;
 }
 
@@ -286,7 +287,11 @@ h4 { font-size: var(--fs-600); }
   transition: padding-block var(--transition-base);
 }
 .site-header.is-scrolled .header-bar {
-  padding-block: 0.6rem;
+  padding-block: 0.45rem;
+}
+.site-header.is-scrolled .brand__mark {
+  width: 34px;
+  height: 34px;
 }
 
 .brand {
@@ -303,6 +308,7 @@ h4 { font-size: var(--fs-600); }
   width: 42px;
   height: 42px;
   flex-shrink: 0;
+  transition: width var(--transition-base), height var(--transition-base);
 }
 .brand__text { display: flex; flex-direction: column; line-height: 1.2; }
 .brand__text small {
@@ -426,6 +432,29 @@ h4 { font-size: var(--fs-600); }
 .hero__trust strong { display: block; color: var(--color-text); font-family: var(--font-serif); font-size: 1.3rem; }
 .hero__trust a { color: var(--color-text-muted); text-decoration: none; }
 .hero__trust a:hover { color: var(--color-primary); text-decoration: underline; }
+
+/* --- Entrée animée du hero, dès le chargement (aucun scroll requis) --- */
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero .hero__badge,
+.hero h1,
+.hero .lede,
+.hero .hero__actions,
+.hero .hero__trust {
+  animation: heroRise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero .hero__badge { animation-delay: 0.05s; }
+.hero h1 { animation-delay: 0.16s; }
+.hero .lede { animation-delay: 0.32s; }
+.hero .hero__actions { animation-delay: 0.46s; }
+.hero .hero__trust { animation-delay: 0.58s; }
+@media (prefers-reduced-motion: reduce) {
+  .hero .hero__badge, .hero h1, .hero .lede, .hero .hero__actions, .hero .hero__trust {
+    animation: none;
+  }
+}
 
 .hero__art {
   position: relative;
@@ -650,19 +679,26 @@ tbody tr:last-child td { border-bottom: none; }
 
 [data-reveal] {
   opacity: 0;
-  transform: translateY(28px) scale(0.97);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform:
+    translateY(var(--reveal-y, 48px))
+    translateX(var(--reveal-x, 0px))
+    rotate(var(--reveal-r, 0deg))
+    scale(var(--reveal-scale, 0.94));
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: var(--reveal-delay, 0ms);
   will-change: opacity, transform;
 }
-[data-reveal].is-visible { opacity: 1; transform: translateY(0) scale(1); }
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+}
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1; transform: none; transition-delay: 0ms; }
 }
 
 /* --- Effet de parallaxe léger sur l'image du hero --- */
 .hero__art[data-parallax] img {
-  transform: scale(1.08) translateY(var(--parallax-y, 0px));
+  transform: scale(1.14) translateY(var(--parallax-y, 0px));
   transition: transform 0.05s linear;
   will-change: transform;
 }
