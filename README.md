@@ -25,15 +25,17 @@ seulement quelques valeurs administratives à compléter :
 | CRPCEN / SIRET / TVA / forme d'exercice | `[à compléter]` | ⚠️ à compléter | `mentions-legales/index.html` |
 | Hébergeur | `[à compléter]` | ⚠️ à compléter | `mentions-legales/index.html` — voir aussi la note « Hébergement » ci-dessous, spécifique aux domaines `notaires.fr` |
 | Formulaire de contact | `action="https://formspree.io/f/xqerdlop"` | ✅ configuré (compte Formspree réel) | — |
-| Logo | Logo officiel « Notaires de France » (bloc-marque CSN, coloris bleu conforme) accolé au nom de l'étude | ✅ intégré | `assets/img/ndf-logo-blue.png` (en-tête), `ndf-logo-white.png` (pied de page sur fond foncé), favicons |
+| Logo | Logo officiel « Notaires de France » (bloc-marque CSN, coloris gris anthracite/blanc) accolé au nom de l'étude | ✅ intégré | `assets/img/ndf-logo-dark.png` (en-tête, mode clair), `ndf-logo-white.png` (en-tête mode sombre + pied de page sur fond foncé), favicons |
 
 ### ⚠️ Important — usage du logo officiel « Notaires de France »
 
 Le logo est utilisé conformément à la charte graphique du notariat (CSN, 2021) :
 le logo officiel n'est **jamais utilisé seul** pour représenter l'étude, il est
-toujours accolé au nom « Henri Lorne - Notaire » (règle du bloc-marque). Le
-coloris bleu d'origine a été conservé (les teintes autorisées par la charte
-sont le bleu, le gris/noir, le rouge et le turquoise — le vert du site n'en
+toujours accolé au nom « Henri Lorne - Notaire » (règle du bloc-marque). Il est
+recoloré en gris anthracite (proche du noir/texte du site, sans ajouter de
+nouvelle teinte) plutôt que dans son bleu d'origine, pour rester discret à
+côté du vert de l'étude (les teintes autorisées par la charte sont le bleu, le
+gris/noir, le rouge et le turquoise — le vert du site n'en
 fait pas partie). Si le logo est un jour remplacé, veillez à conserver cette
 règle d'association et à rester dans la palette de couleurs autorisée par la
 charte.
